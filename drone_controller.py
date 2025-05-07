@@ -35,6 +35,7 @@ class DroneController:
         print("Armed.")
 
     def takeoff(self, altitude=10):
+        print("Takeoff started...")
         self.master.mav.command_long_send(
             self.master.target_system, self.master.target_component,
             mavutil.mavlink.MAV_CMD_NAV_TAKEOFF,
@@ -60,7 +61,7 @@ class DroneController:
         self.master.motors_disarmed_wait()
         print("Motors disarmed.")
 
-    def wait_until_altitude_reached(self, target_alt, threshold=0.3):
+    def wait_until_altitude_reached(self, target_alt, threshold=0.1):
         while True:
             msg = self.master.recv_match(type='GLOBAL_POSITION_INT', blocking=True)
             if msg:
@@ -70,7 +71,6 @@ class DroneController:
                     break
 
     def wait_until_landed(self, threshold=0.1):
-        print("Waiting for drone to land...")
         while True:
             msg = self.master.recv_match(type='GLOBAL_POSITION_INT', blocking=True)
             if msg:
