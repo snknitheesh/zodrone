@@ -106,7 +106,7 @@ class DroneController:
             0, 0, 0, 
             0, 0      
         )
-        print(f"[INFO] Waiting to reach {tag}......")
+        print(f"[INFO] Waiting to reach {tag}...")
         while True:
             msg = self.master.recv_match(type='GLOBAL_POSITION_INT', blocking=True)
             if msg:
