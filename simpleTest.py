@@ -1,10 +1,9 @@
 from drone_controller import DroneController
 import time
 
-# Import the controller
 drone = DroneController()
 
-# Commands
+# Mission - 1
 drone.set_mode("GUIDED")
 print("[INFO] Mission started")
 # drone.wait_until_initialization()  # rewrite not working...
