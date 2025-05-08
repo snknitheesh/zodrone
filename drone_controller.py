@@ -31,7 +31,7 @@ class DroneController:
                 print(f"[INFO] Mode changed to {mode_name}")
                 break
 
-    def arm_vehicle(self):
+    def arm(self):
         self.master.mav.command_long_send(
             self.master.target_system, self.master.target_component,
             mavutil.mavlink.MAV_CMD_COMPONENT_ARM_DISARM,
