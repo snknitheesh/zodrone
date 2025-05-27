@@ -2,3 +2,10 @@ __pycache__/
 *.bag
 *.pyc
 *.mp4
+logs/
+eeprom.bin
+mav.parm
+mav.tlog
+mav.tlog.raw
+terrain/
+result_demos/
