@@ -67,7 +67,7 @@ class DroneController:
         self.master.motors_disarmed_wait()
         print("[INFO] Motors disarmed.")
 
-    def wait_until_altitude_reached(self, target_alt, threshold=0.1):
+    def wait_until_altitude_reached(self, target_alt, threshold=1):
         while True:
             msg = self.master.recv_match(type='GLOBAL_POSITION_INT', blocking=True)
             if msg:

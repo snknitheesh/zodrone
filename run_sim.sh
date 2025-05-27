@@ -1,0 +1,2 @@
+gnome-terminal -- bash -c ". ~/.profile; gz sim -v4 -r iris_runway.sdf; exec bash"
+gnome-terminal -- bash -c ". ~/.profile; sim_vehicle.py -v ArduCopter -f gazebo-iris --model JSON --map --console --out=udp:127.0.0.1:14550; exec bash"

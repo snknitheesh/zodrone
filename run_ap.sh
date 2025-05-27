@@ -1,1 +1,0 @@
-../Tools/autotest/sim_vehicle.py -v ArduCopter -f quad --map --console --out=udp:127.0.0.1:14550
