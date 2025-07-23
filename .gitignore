@@ -9,3 +9,5 @@ mav.tlog
 mav.tlog.raw
 terrain/
 result_demos/
+recorded_terrain/
+online_terrains/
